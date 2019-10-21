@@ -1,16 +1,19 @@
+// SPDX-License-Identifier: GPL-2.0
 #include <linux/init.h>
 #include <linux/module.h>
 #include <linux/moduleparam.h>
 #include <linux/device.h>
 #include <linux/err.h>
 
-static int vp_module_init(void) {
-    pr_info("vp_module loaded\n");
-    return 0;
+static int vp_module_init(void)
+{
+	pr_info("vp_module loaded\n");
+	return 0;
 }
 
-static void vp_module_exit(void) {
-    pr_info("vp_module: module exited");
+static void vp_module_exit(void)
+{
+	pr_info("vp_module: module exited");
 }
 
 module_init(vp_module_init);
